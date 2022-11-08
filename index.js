@@ -59,7 +59,7 @@ app.get('/',async (req,res)=>{
   res.json(allData)
 })
 
-app.use('/uploads', express.static('uploads'));
+app.use(express.static('uploads'));
 
 app.listen(process.env.PORT || port, () => {
   console.log(`server running successfully at http://localhost:${port}`);
